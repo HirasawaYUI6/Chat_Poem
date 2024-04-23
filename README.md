@@ -6,6 +6,8 @@
 
 ​	我们的模型是您创作古典诗歌的小助手，具备丰富的古典诗歌知识和意象识别、诗歌翻译能力。无论您是想了解一首诗歌的写作背景、情感表达，甚至需要创作一首属于您的诗歌，我们都能为您提供帮助。
 
+如何学习大模型部署和微调请参考：[开源大模型食用指南](https://github.com/datawhalechina/self-llm.git) 以及 [书生·浦语大模型实战营课程](https://github.com/InternLM/tutorial.git)
+
 ![](./imgs/structure.png)
 
 ## OpenXlab 模型
@@ -34,7 +36,7 @@
 
 使用如下脚本文件
 
-
+```
 
 # 指定输入的CSV文件和输出的JSON文件
 
