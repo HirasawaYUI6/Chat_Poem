@@ -80,7 +80,7 @@ if __name__ == "__main__":
 
 | 基座模型         | 配置文件                               |
 | ---------------- | -------------------------------------- |
-| internlm-chat-7b | internlm_chat_7b_qlora_medqa2019_e3.py |
+| internlm-chat-7b | internlm_chat_7b_qlora_oasst1_e3.py |
 
 微调方法如下:
 
@@ -100,7 +100,7 @@ xtuner train ./internlm_chat_7b_qlora_oasst1_e3_copy.py --deepspeed deepspeed_ze
 训练效果：
 ![](./imgs/pre.png)
 
-2. 将得到的 PTH 模型转换为 HuggingFace 模型
+2. 将得到的 PTH 模型转换为 HuggingFace 模型，并与基座模型合并。
 
 ```
 internlm_chat_7b_qlora_oasst1_e3
