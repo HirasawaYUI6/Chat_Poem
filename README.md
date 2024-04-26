@@ -72,7 +72,7 @@ if __name__ == "__main__":
 
 ## 微调 :satisfied:	
 
-  使用 `XTuner `训练， `XTuner `有各个模型的一键训练脚本，很方便。且对` InternLM2 `的支持度最高。
+  使用 `XTuner `训练， `XTuner `有各个模型的一键训练脚本，很方便。且对` InternLM `的支持度最高。
   微调参考：[书生·浦语大模型实战营课程](https://github.com/InternLM/tutorial.git)
 
 ### XTuner
