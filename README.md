@@ -114,7 +114,8 @@ xtuner convert merge ./internlm-chat-7b ./hf ./merged --max-shard-size 2GB
 ```
 # PowerShell运行
 ssh -CNg -L 6006:127.0.0.1:6006 root@ssh.intern-ai.org.cn -p 37845
-
+# streamlit启动运行
+streamlit run /root/code/InternLM/web_demo.py --server.address 127.0.0.1 --server.port 6006
 ```
 
 效果演示
