@@ -14,9 +14,9 @@
 
 古诗词创作助手使用的是InternLM 的 7B 模型，模型参数量为 7B，模型已上传，可以直接下载推理。
 
-| 基座模型         | 微调数据量          | 训练次数 | 下载地址 |
-| ---------------- | ------------------- | -------- | -------- |
-| InternLM-chat-7b | 27218 conversations | 5 epochs |          |
+| 基座模型         | 微调数据量          | 训练次数 | 
+| ---------------- | ------------------- | -------- | 
+| InternLM-chat-7b | 27218 conversations | 10 epochs | 
 
 ## 数据集
 
@@ -64,8 +64,14 @@
 ```
 conda activate xtuner0.1.9
 cd ~/ft-medqa
-xtuner train  internlm_chat_7b_qlora_medqa2019_e3.py --deepspeed deepspeed_zero2
+xtuner train ./internlm_chat_7b_qlora_oasst1_e3_copy.py --deepspeed deepspeed_zero2
 ```
+
+训练前：
+![](./imgs/pre_p.png)
+
+训练效果：
+![](./imgs/pre.png)
 
 2. 将得到的 PTH 模型转换为 HuggingFace 模型
 
@@ -75,48 +81,13 @@ xtuner convert pth_to_hf ./internlm_chat_7b_qlora_medqa2019_e3.py ./work_dirs/in
 xtuner convert merge ./internlm-chat-7b ./hf ./merged --max-shard-size 2GB
 ```
 
-### Chat
-
-```
-
-```
-
 ## 本地网页部署
 
 ```
+# PowerShell运行
+ssh -CNg -L 6006:127.0.0.1:6006 root@ssh.intern-ai.org.cn -p 37845
 
 ```
 
 效果演示
-
-
-## OpenXLab 部署 古诗词创作助手
-
-
-
-
-
-## LmDeploy部署
-
-
-
-
-
-## Lmdeploy&opencompass 量化以及量化评测
-
-
-
-### `KV Cache`量化
-
-
-
-### `W4A16`量化
-
-
-
-
-
-
-
-## OpenCompass 评测
-
+![](./imgs/las.png)
