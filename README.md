@@ -8,7 +8,7 @@
 
 如何学习大模型部署和微调请参考：[开源大模型食用指南](https://github.com/datawhalechina/self-llm.git) 以及 [书生·浦语大模型实战营课程](https://github.com/InternLM/tutorial.git)
 
-## OpenXlab 模型
+## OpenXlab 模型 :smirk:	
 
 古诗词创作助手使用的是InternLM 的 7B 模型，模型参数量为 7B，模型已上传，可以直接下载推理。
 
@@ -70,9 +70,10 @@ if __name__ == "__main__":
 
 ```
 
-## 微调
+## 微调 :satisfied:	
 
   使用 `XTuner `训练， `XTuner `有各个模型的一键训练脚本，很方便。且对` InternLM2 `的支持度最高。
+  微调参考：[书生·浦语大模型实战营课程](https://github.com/InternLM/tutorial.git)
 
 ### XTuner
 
@@ -108,7 +109,7 @@ xtuner convert pth_to_hf ./internlm_chat_7b_qlora_oasst1_e3.py ./work_dirs/inter
 xtuner convert merge ./internlm-chat-7b ./hf ./merged --max-shard-size 2GB
 ```
 
-## 本地网页部署
+## 本地网页部署 :heart_eyes:	
 
 ```
 # PowerShell运行
