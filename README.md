@@ -88,7 +88,7 @@ if __name__ == "__main__":
 
 ```
 conda activate xtuner0.1.9
-cd ~/ft-medqa
+cd ~/gushi
 xtuner train ./internlm_chat_7b_qlora_oasst1_e3_copy.py --deepspeed deepspeed_zero2
 ```
 
@@ -103,8 +103,8 @@ xtuner train ./internlm_chat_7b_qlora_oasst1_e3_copy.py --deepspeed deepspeed_ze
 2. 将得到的 PTH 模型转换为 HuggingFace 模型
 
 ```
-internlm_chat_7b_qlora_medqa2019_e3
-xtuner convert pth_to_hf ./internlm_chat_7b_qlora_medqa2019_e3.py ./work_dirs/internlm_chat_7b_qlora_medqa2019_e3/epoch_1.pth ./hf
+internlm_chat_7b_qlora_oasst1_e3
+xtuner convert pth_to_hf ./internlm_chat_7b_qlora_oasst1_e3.py ./work_dirs/internlm_chat_7b_qlora_oasst1_e3/epoch_10.pth ./hf
 xtuner convert merge ./internlm-chat-7b ./hf ./merged --max-shard-size 2GB
 ```
 
