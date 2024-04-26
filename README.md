@@ -29,14 +29,15 @@
 
 ### 数据处理与整理
 
-1. 数据集是以CSV格式存储的，第一行为列名，分别为 `title`, `reply`, `is_best`。
-2. 数据集把数据分类为优质回答（is_best=1）与劣质回答（is_best=0），需要过滤掉 `is_best` 列为0的数据。
+1. 数据集是以json格式存储的，然而格式有一定问题。
+2. 需要删除部分不符合实意的数据。
+3. 进行格式转换。
 
 使用如下脚本文件
 
 ```
 
-# 指定输入的CSV文件和输出的JSON文件
+# 指定输入的JSON文件
 import json
 
 def convert_to_json(jsonl_file):
@@ -66,8 +67,6 @@ if __name__ == "__main__":
     jsonl_file = "dugushici-com-70k.json"
     output_file = "output4.json"
     main(jsonl_file, output_file)
-# 调用函数进行转换
-
 
 ```
 
@@ -92,6 +91,8 @@ conda activate xtuner0.1.9
 cd ~/ft-medqa
 xtuner train ./internlm_chat_7b_qlora_oasst1_e3_copy.py --deepspeed deepspeed_zero2
 ```
+
+此外，为了增强效果，增加对模型的提示词。
 
 训练前：
 ![](./imgs/pre_p.png)
